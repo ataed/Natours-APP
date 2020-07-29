@@ -7,7 +7,8 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
-const compression = require('compression')
+const compression = require('compression');
+const cors = require('cors');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -23,6 +24,11 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 //1) GLOBAL MIDDELWARES
+//Implement CORS
+//Access-Control-Allow-Origin *
+app.use(cors());
+
+app.options('*', cors());
 
 //Serving static files
 app.use(express.static(path.join(__dirname, 'public')));
@@ -67,7 +73,7 @@ app.use(
   })
 );
 
-app.use(compression())
+app.use(compression());
 
 //Test middleware
 app.use((req, res, next) => {
