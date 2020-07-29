@@ -9,8 +9,11 @@ const {
   getSignupForm,
   getAccount,
   getMyTours,
+  alert,
 } = require('../controllers/viewsController');
 const { isLoggedIn, protect } = require('../controllers/authController');
+
+router.use(alert);
 
 router.get('/', isLoggedIn, getOverview);
 router.get('/login', isLoggedIn, getLoginForm);
