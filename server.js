@@ -31,8 +31,17 @@ const server = app.listen(port, () => {
 
 process.on('unhandledRejection', (err) => {
   console.log('UNHADLED REJECTION! 🤯 Shutting down....');
-  console.log(err);
+  console.log(err.name, err.message);
   server.close(() => {
     process.exit(1);
+  });
+});
+
+//event listener to SIGTERM signal
+//SIGTERM signal : sended from heroku every 24h to shutdown the app
+process.on('SIGTERM', () => {
+  console.log('👋 SIGTERM RECEIVED . Shutting down gracefully');
+  server.close(() => {
+    console.log('Process terminated! ⚡');
   });
 });
