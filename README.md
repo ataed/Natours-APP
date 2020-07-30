@@ -24,11 +24,11 @@
 - Signup by creating new account.
 - Or you can browse the amazing tours home page and see all the details for each tour.
 
-## :pushpin: User Pofile Features :
+## :pushpin: User Profile Features :
 
 1.  Update email , username , profile picture and password ,
 2.  Book A Tour :
-    . You can proceed payment by entering this card details(testing mode):
+     You can proceed payment by entering this card details(testing mode):
 
     ```
 
