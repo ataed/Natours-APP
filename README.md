@@ -11,7 +11,6 @@
 - [JSON Web Token](https://jwt.io/) - Authentication
 - [Mailtrap](https://mailtrap.io/) & [Mailgun](https://www.mailgun.com) - Mail Delivery
 - [Stripe](https://stripe.com/)- Online Payment API
-- [Postman](https://www.postman.com/) - For testing the API
 - [Parcel](https://parceljs.org/) - Web Application Bundler
 - [Heroku](https://www.heroku.com/) - App Deployement
 
@@ -31,13 +30,7 @@
      You can proceed payment by entering this card details(testing mode):
 
     ```
-
+     - Card No. : 4242 4242 4242 4242
+     - Expiry date: 04 / 24
+     - CVV: 456
     ```
-
-- Card No. : 4242 4242 4242 4242
-- Expiry date: 04 / 24
-- CVV: 456
-
-```
-
-```
